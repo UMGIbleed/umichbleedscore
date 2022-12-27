@@ -4,46 +4,81 @@
 
 
 
-<iframe width="670" height="660" frameborder="0" scrolling="no" src="https://onedrive.live.com/embed?resid=FEC234CF45FDA94A%21419&authkey=%21AGbPYMQ_rVKrgP4&em=2&wdAllowInteractivity=False&AllowTyping=True&ActiveCell='Sheet1'!B2&Item='Sheet1'!A2%3AB29&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True&edesNext=false&edrtees6=false&resen=false"></iframe>
-
-
-
-<div class="row">
-    <div class="col-6">
-        1. Powdered white sugar (cups)
+<html>
+  <head><title>Simple HTML Calculation form</title></head>
+  <body>
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-6 row-heading">
+          Item
+        </div>
+        <div class="col-3 row-heading">
+          Quantity
+        </div>
+        <div class="col-2 row-heading">
+          Price
+        </div>
+        
+      </div>
+      <div class="row">
+        <div class="col-6">
+          1. Powdered white sugar (cups)
+        </div>
+        <div class="col-3">
+          <input type="number" value="0" class="qty" id="qty_sugar"/>
+        </div>
+        <div class="col-2">
+          <input type="number" readonly value="0" id="price_sugar"/>
+        </div>
+      </div>
+      
+       <div class="row my-3">
+        <div class="col-6">
+          2. Butter salted (grams)
+        </div>
+        <div class="col-3">
+          <input type="number" value="0" class="qty" id="qty_butter"/>
+        </div>
+        <div class="col-2">
+          <input type="number" readonly value="0" id="price_butter"/>
+        </div>
+      </div>
+      
+      <div class="row my-3">
+        <div class="col-6">
+          3. Eggs (count)
+        </div>
+        <div class="col-3">
+          <input type="number" class="qty" value="0" id="qty_eggs"/>
+        </div>
+        <div class="col-2">
+          <input type="number" readonly value="0" id="price_eggs"/>
+        </div>
+      </div>
+      
+      <div class="row my-3">
+        <div class="col-6">
+          4. Vanilla extract (ml)
+        </div>
+        <div class="col-3">
+          <input type="number" class="qty" value="0" id="qty_vanilla"/>
+        </div>
+        <div class="col-2">
+          <input type="number" readonly value="0" id="price_vanilla"/>
+        </div>
+      </div>
+      
+      <div class="row my-4">
+        <div class="col-9 text-right total">
+         Total
+        </div>
+        
+        <div class="col-2 total-val">
+          <span id="total_value">0</span
+        </div>
+      </div>
+      
     </div>
-    <div class="col-3">
-        <input type="number" value="0" class="qty" id="qty_sugar" />
-    </div>
-    <div class="col-2">
-        <input type="number" readonly value="0" id="price_sugar" />
-    </div>
-</div>
 
-
-
-function calculateTotal()
-{
-  let unit_price={
-    sugar: 22,
-    butter: 12,
-    eggs: 2,
-    vanilla:43    
-  };
-  let item_price={}
-  
-  item_price.sugar = ($("#qty_sugar").val() * unit_price.sugar )
-  $("#price_sugar").val(item_price.sugar);
-  
-  ...
-  ...
-  
-}
-
-
-<select name="Country" multiple size="5">
-  <option value="USA">USA</option>
-  <option value="Russia">Russia</option>
-  <option value="India">India</option>
-  <option value="Britain">Britain</option>
-</select>
+  </body> 
+</html>
