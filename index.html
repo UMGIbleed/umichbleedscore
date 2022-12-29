@@ -14,64 +14,271 @@
   <body>
     <div class="container mt-4">
       <div class="row">
-        <div class="col-6 row-heading">
-          Item
+        <div class="col-3 row-heading">
         </div>
         <div class="col-3 row-heading">
-          Quantity
         </div>
         <div class="col-2 row-heading">
-          Price
+        </div>
+        <div class="col-2 row-heading">
         </div>
         
       </div>
       <div class="row">
-        <div class="col-6">
-          1. Powdered white sugar (cups)
+        <div class="col-3">
+          Age 
         </div>
         <div class="col-3">
-          <input type="number" value="0" class="qty" id="qty_sugar"/>
+          <input type="number" value="0" class="qty" id="qty_age"/>
         </div>
         <div class="col-2">
-          <input type="number" readonly value="0" id="price_sugar"/>
+          (years)
+        </div>
+        <div class="col-2">
+        </div>
+      </div>
+     
+      
+      
+ 
+   
+   <div class="row">
+        <div class="col-3">
+          Gender  
+        </div>
+        <div class="col-3">
+          <input type="radio" class="qty_female" name="gender" value=0>
+          <label for="qty_female">Male</label><br>
+        </div>
+        <div class="col-2">
+          <input type="radio" class="qty_female" name="gender" value=1>
+          <label for="qty_female">Female</label><br>
+        </div>
+     <div class="col-2">
+     </div>
+      </div>  
+
+
+ <div class="row">
+        <div class="col-3">
+          Race  
+        </div>
+        <div class="col-3">
+          <input type="radio" class="race" name="race" value=0>
+          <label for="race">White</label><br>
+        </div>
+        <div class="col-2">
+          <input type="radio" class="race" name="race" value=1>
+          <label for="race">African-American</label><br>
+        </div>
+        <div class="col-2">
+          <input type="radio" class="race" name="race" value=2>
+          <label for="race">Other</label><br>
+        </div>
+   
+      </div>  
+
+    <div class="row">
+        <div class="col-3">
+          Device Type  
+        </div>
+        <div class="col-3">
+          <input type="radio" class="dt" name="dt" value=0>
+          <label for="dt">LVAD</label><br>
+        </div>
+        <div class="col-2">
+          <input type="radio" class="dt" name="dt" value=1>
+          <label for="dt">BIVAD</label><br>
+        </div>
+     <div class="col-2">
+     </div>
+      </div>  
+      
+ <div class="row">
+        <div class="col-3">
+          Frailty  
+        </div>
+        <div class="col-3">
+          <input type="radio" class="fra" name="fra" value=0>
+          <label for="fra">No</label><br>
+        </div>
+        <div class="col-2">
+          <input type="radio" class="fra" name="fra" value=1>
+          <label for="fra">Yes</label><br>
+        </div>
+        <div class="col-2">
+          <input type="radio" class="fra" name="fra" value=2>
+          <label for="fra">Unknown</label><br>
+        </div>
+   
+      </div>   
+      
+ <div class="row">
+        <div class="col-3">
+          History of GI Ulcers  
+        </div>
+        <div class="col-3">
+          <input type="radio" class="hgi" name="hgi" value=0>
+          <label for="hgi">No</label><br>
+        </div>
+        <div class="col-2">
+          <input type="radio" class="hgi" name="hgi" value=1>
+          <label for="hgi">Yes</label><br>
+        </div>
+     <div class="col-2">
+     </div>
+      </div>  
+      
+    <div class="row">
+        <div class="col-3">
+          Liver Dysfunction
+        </div>
+        <div class="col-3">
+          <input type="radio" class="liverd" name="liverd" value=0>
+          <label for="liverd">No</label><br>
+        </div>
+        <div class="col-2">
+          <input type="radio" class="liverd" name="liverd" value=1>
+          <label for="liverd">Yes</label><br>
+        </div>
+     <div class="col-2">
+     </div>
+      </div>  
+      
+    <div class="row">
+        <div class="col-3">
+          Peripheral Arterial Disease
+        </div>
+        <div class="col-3">
+          <input type="radio" class="pad" name="pad" value=0>
+          <label for="pad">No</label><br>
+        </div>
+        <div class="col-2">
+          <input type="radio" class="pad" name="pad" value=1>
+          <label for="pad">Yes</label><br>
+        </div>
+     <div class="col-2">
+     </div>
+      </div>    
+   
+      <div class="row">
+        <div class="col-3">
+          History of Smoking  
+        </div>
+        <div class="col-3">
+          <input type="radio" class="hsmoke" name="hsmoke" value=0>
+          <label for="hsmoke">No</label><br>
+        </div>
+        <div class="col-2">
+          <input type="radio" class="hsmoke" name="hsmoke" value=1>
+          <label for="hsmoke">Yes</label><br>
+        </div>
+        <div class="col-2">
+          <input type="radio" class="hsmoke" name="hsmoke" value=2>
+          <label for="hsmoke">Unknown</label><br>
+        </div>
+   
+      </div>   
+      
+       <div class="row">
+        <div class="col-3">
+          New-York Heart Association Class
+        </div>
+        <div class="col-3">
+          <input type="radio" class="nyha" name="nyha" value=0>
+          <label for="nyha">I/II/III</label><br>
+        </div>
+        <div class="col-2">
+          <input type="radio" class="nyha" name="nyha" value=1>
+          <label for="nyha">IV</label><br>
+        </div>
+     <div class="col-2">
+     </div>
+      </div>    
+    
+      
+       <div class="row">
+        <div class="col-3">
+          Right Ventricular Dysfunction   
+        </div>
+        <div class="col-3">
+          <input type="radio" class="rvef" name="rvef" value=0>
+          <label for="rvef">Mild/Normal/Moderate</label><br>
+        </div>
+        <div class="col-2">
+          <input type="radio" class="rvef" name="rvef" value=1>
+          <label for="rvef">Severe</label><br>
+        </div>
+        <div class="col-2">
+          <input type="radio" class="rvef" name="rvef" value=2>
+          <label for="rvef">Unknown</label><br>
+        </div>
+   
+      </div>   
+      
+       
+       <div class="row">
+        <div class="col-3">
+          Hemoglobin A1C (%) 
+        </div>
+        <div class="col-3">
+          <input type="radio" class="ha1c" name="ha1c" value=0>
+          <label for="ha1c">Unknown/<7 </label><br>
+        </div>
+        <div class="col-2">
+          <input type="radio" class="ha1c" name="ha1c" value=1>
+          <label for="ha1c">>=7 </label><br>
+        </div>
+     <div class="col-2">
+     </div>
+      </div>  
+      
+     <div class="row">
+        <div class="col-3">
+          Ischemic Cardiomyopathy Etiology
+        </div>
+        <div class="col-3">
+          <input type="radio" class="ice" name="ice" value=0>
+          <label for="ice">No </label><br>
+        </div>
+        <div class="col-2">
+          <input type="radio" class="ice" name="ice" value=1>
+          <label for="ice">Yes </label><br>
+        </div>
+     <div class="col-2">
+     </div>
+      </div>  
+    
+         
+        
+      <div class="row">
+        <div class="col-3">
+          BUN
+        </div>
+        <div class="col-3">
+          <input type="number" value="0" class="qty" id="qty_bun"/>
+        </div>
+        <div class="col-2">
+          (mg/dL)
+        </div>
+        <div class="col-2">
         </div>
       </div>
       
-       <div class="row my-3">
-        <div class="col-6">
-          2. Butter salted (grams)
+       <div class="row">
+        <div class="col-3">
+          Hemoglobin
         </div>
         <div class="col-3">
-          <input type="number" value="0" class="qty" id="qty_butter"/>
+          <input type="number" value="0" class="qty" id="qty_hg"/>
         </div>
         <div class="col-2">
-          <input type="number" readonly value="0" id="price_butter"/>
-        </div>
-      </div>
-      
-      <div class="row my-3">
-        <div class="col-6">
-          3. Eggs (count)
-        </div>
-        <div class="col-3">
-          <input type="number" class="qty" value="0" id="qty_eggs"/>
+          (g/dL)
         </div>
         <div class="col-2">
-          <input type="number" readonly value="0" id="price_eggs"/>
         </div>
       </div>
-      
-      <div class="row my-3">
-        <div class="col-6">
-          4. Vanilla extract (ml)
-        </div>
-        <div class="col-3">
-          <input type="number" class="qty" value="0" id="qty_vanilla"/>
-        </div>
-        <div class="col-2">
-          <input type="number" readonly value="0" id="price_vanilla"/>
-        </div>
-      </div>
+     
       
       <div class="row my-4">
         <div class="col-9 text-right total">
