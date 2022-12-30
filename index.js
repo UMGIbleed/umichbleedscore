@@ -15,9 +15,9 @@ function calculateTotal()
     liverd:0.4191,
     pad:0.2782,
     hsmoke_yes:0.2757,
-    hsmoke_unknown0:.1495,
+    hsmoke_unknown:.1495,
     nyha:0.267,
-    revf_severe:0.2285,
+    rvef_severe:0.2285,
     rvef_unknown:0.03974,
     ha1c:0.1983,
     ice:0.1307,
@@ -49,7 +49,7 @@ function calculateTotal()
   }
   
   var dt_val = document.querySelector('.dt:checked').value;
-  item_price.gender=(dt_val * unit_price.dt);
+  item_price.dt=(dt_val * unit_price.dt);
   
   var fra_val = document.querySelector('.fra:checked').value;
   if(fra_val==1){
@@ -109,7 +109,8 @@ function calculateTotal()
   
   
   
-  let total = item_price.age+item_price.gender+item_price.race+item_price.racegender+item_price.dt+item_price.fra+item_price.fragender+item_price.hgu+item_price.liverd+item_price.pad+item_price.hsmoke+item_price.nyha+item_price.rvef+item_price.ha1c+item_price.ice+item_price.bun+item_price.hg;
+  let total = item_price.age+item_price.gender+item_price.race+item_price.racegender+item_price.dt+item_price.fra+item_price.fragender+item_price.hgi+item_price.liverd+item_price.pad+item_price.hsmoke+item_price.nyha+item_price.rvef+item_price.ha1c+item_price.ice+item_price.bun+item_price.hg;
+
 
  
   $("#total_value").text(total);
