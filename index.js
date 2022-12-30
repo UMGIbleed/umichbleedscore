@@ -111,9 +111,15 @@ function calculateTotal()
   
   let total = item_price.age+item_price.gender+item_price.race+item_price.racegender+item_price.dt+item_price.fra+item_price.fragender+item_price.hgi+item_price.liverd+item_price.pad+item_price.hsmoke+item_price.nyha+item_price.rvef+item_price.ha1c+item_price.ice+item_price.bun+item_price.hg;
 
-
- 
-  $("#total_value").text(total);
+  let fregib={};
+  fregib.half= Math.pow(0.9866659,Math.exp(total))*100;
+  fregib.one= Math.pow(0.9807243,Math.exp(total))*100;
+  fregib.two= Math.pow(0.9726137,Math.exp(total))*100;
+  
+  $("#half").text(fregib.half);
+  $("#one").text(fregib.one);
+  $("#two").text(fregib.two);
+  
   
 }
 
