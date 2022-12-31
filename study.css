@@ -1,0 +1,21 @@
+.col-2{-ms-flex:0 0 16.666667%;flex:0 0 16.666667%;max-width:16.666667%}   
+/* Numbers followed by -webkit-, -ms- or -moz- specify the first version that worked with a prefix. https://www.w3schools.com/cssref/css3_pr_flex.php */
+
+
+
+.col-3{-ms-flex:0 0 25%;flex:0 0 25%;max-width:25%}
+
+
+.total-val
+{
+  font-size:2rem;
+  border:
+}
+
+/* This  {border:} is equivalent to {border:;} */
+
+
+.col-2{-ms-flex:0 0 16.666667%;flex:0 0 16.666667%;max-width:16.666667%;backgroud-color:lightgray;}   
+<span  style="background-color:lightgray;" id="half">0</span>
+
+/* two code to implement background-color */
