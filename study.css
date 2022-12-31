@@ -19,3 +19,13 @@
 <span  style="background-color:lightgray;" id="half">0</span>
 
 /* two code to implement background-color */
+
+
+.center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+/* using auto to center the block, width to specify the length of the block, padding is to specify the height 
+ */
