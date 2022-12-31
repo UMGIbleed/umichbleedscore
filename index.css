@@ -11,6 +11,6 @@
 .insetborder
 {
  
-  border:inset;
+  border-style:inset;
 }
 
