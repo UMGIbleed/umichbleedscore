@@ -112,9 +112,9 @@ function calculateTotal()
   let total = item_price.age+item_price.gender+item_price.race+item_price.racegender+item_price.dt+item_price.fra+item_price.fragender+item_price.hgi+item_price.liverd+item_price.pad+item_price.hsmoke+item_price.nyha+item_price.rvef+item_price.ha1c+item_price.ice+item_price.bun+item_price.hg;
 
   let fregib={};
-  fregib.half= 1-Math.pow(0.9866659,Math.exp(total))*100;
-  fregib.one= 1-Math.pow(0.9807243,Math.exp(total))*100;
-  fregib.two= 1-Math.pow(0.9726137,Math.exp(total))*100;
+  fregib.half= (1-Math.pow(0.9866659,Math.exp(total)))*100;
+  fregib.one= (1-Math.pow(0.9807243,Math.exp(total)))*100;
+  fregib.two= (1-Math.pow(0.9726137,Math.exp(total)))*100;
   
   $("#half").text(fregib.half);
   $("#one").text(fregib.one);
@@ -125,6 +125,19 @@ function calculateTotal()
 
 $(function()
  {
-    $(".qty").on("change keyup",calculateTotal)
+    $(".qty").on("change",calculateTotal)
+    $(".qty_female").on("change",calculateTotal)
+    $(".race").on("change",calculateTotal)
+    $(".dt").on("change",calculateTotal)
+    $(".fra").on("change",calculateTotal)
+    $(".hgi").on("change",calculateTotal)
+    $(".liverd").on("change",calculateTotal)
+    $(".pad").on("change",calculateTotal)
+    $(".hsmoke").on("change",calculateTotal)
+    $(".nyha").on("change",calculateTotal)
+    $(".rvef").on("change",calculateTotal)
+    $(".ha1c").on("change",calculateTotal)
+    $(".ice").on("change",calculateTotal)
+  
 })
 
