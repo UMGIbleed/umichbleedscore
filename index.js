@@ -112,9 +112,9 @@ function calculateTotal()
   let total = item_price.age+item_price.gender+item_price.race+item_price.racegender+item_price.dt+item_price.fra+item_price.fragender+item_price.hgi+item_price.liverd+item_price.pad+item_price.hsmoke+item_price.nyha+item_price.rvef+item_price.ha1c+item_price.ice+item_price.bun+item_price.hg;
 
   let fregib={};
-  fregib.half= (1-Math.pow(0.9866659,Math.exp(total)))*100;
-  fregib.one= (1-Math.pow(0.9807243,Math.exp(total)))*100;
-  fregib.two= (1-Math.pow(0.9726137,Math.exp(total)))*100;
+  fregib.half= Math.round((1-Math.pow(0.9866659,Math.exp(total)))*100 * 10) / 10;
+  fregib.one= Math.round((1-Math.pow(0.9807243,Math.exp(total)))*100 * 10) / 10;
+  fregib.two= Math.round((1-Math.pow(0.9726137,Math.exp(total)))*100 * 10) / 10;
   
   $("#half").text(fregib.half);
   $("#one").text(fregib.one);
