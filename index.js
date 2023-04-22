@@ -1,28 +1,23 @@
 function calculateTotal()
 {
   let unit_price={
-    age: 0.03238,
-    female:0.4978,
-    race_AA:0.603,
-    race_other:0.1328,
-    racegender_AA:-0.3699,
-    racegender_other:-0.2034,
-    dt:0.6414,
-    fra_yes:0.383,
-    fra_unknown:0.1965,
-    fragender_yes:-0.5919,
-    hgi:0.844,
-    liverd:0.4191,
-    pad:0.2782,
-    hsmoke_yes:0.2757,
-    hsmoke_unknown:.1495,
-    nyha:0.267,
-    rvef_severe:0.2285,
-    rvef_unknown:0.03974,
-    ha1c:0.1983,
-    ice:0.1307,
-    bun:0.006358,
-    hg:-0.0665
+    age: 0.02856,
+    female:0.3757,
+    dt:0.5738,
+    fra_yes:0.359,
+    fra_unknown:0.1987,
+    fragender_yes:-0.5627,
+    hgi:0.8508,
+    liverd:0.3884,
+    pad:0.3143,
+    hsmoke_yes:0.2488,
+    hsmoke_unknown:.1377,
+    nyha:0.2605,
+    rvef_severe:0.2196,
+    rvef_unknown:0.01746,
+    ha1c:0.1989,
+    bun:0.006297,
+    hg:-0.07279
     
   };
   let item_price={};
@@ -31,22 +26,7 @@ function calculateTotal()
   var gender_val = document.querySelector('.qty_female:checked').value;
   item_price.gender=(gender_val * unit_price.female);
   
-  var race_val = document.querySelector('.race:checked').value;
-  if(race_val==1){
-    item_price.race=(race_val * unit_price.race_AA);
-  } else if(race_val==2){
-    item_price.race=((race_val-1) * unit_price.race_other);
-  } else {
-    item_price.race=0;
-  }
   
-  if(race_val==1){
-    item_price.racegender=(race_val *gender_val* unit_price.racegender_AA);
-  } else if(race_val==2){
-    item_price.racegender=((race_val-1) *gender_val* unit_price.racegender_other);
-  } else {
-    item_price.racegender=0;
-  }
   
   var dt_val = document.querySelector('.dt:checked').value;
   item_price.dt=(dt_val * unit_price.dt);
@@ -100,8 +80,6 @@ function calculateTotal()
   var ha1c_val = document.querySelector('.ha1c:checked').value;
   item_price.ha1c=(ha1c_val * unit_price.ha1c);
   
-  var ice_val = document.querySelector('.ice:checked').value;
-  item_price.ice=(ice_val * unit_price.ice);
   
   item_price.bun = ($("#qty_bun").val() * unit_price.bun);
   
@@ -109,7 +87,7 @@ function calculateTotal()
   
   
   
-  let total = item_price.age+item_price.gender+item_price.race+item_price.racegender+item_price.dt+item_price.fra+item_price.fragender+item_price.hgi+item_price.liverd+item_price.pad+item_price.hsmoke+item_price.nyha+item_price.rvef+item_price.ha1c+item_price.ice+item_price.bun+item_price.hg;
+  let total = item_price.age+item_price.gender+item_price.dt+item_price.fra+item_price.fragender+item_price.hgi+item_price.liverd+item_price.pad+item_price.hsmoke+item_price.nyha+item_price.rvef+item_price.ha1c+item_price.bun+item_price.hg;
 
   let fregib={};
   fregib.half= Math.round((1-Math.pow(0.9866659,Math.exp(total)))*100 * 10) / 10;
@@ -127,7 +105,7 @@ $(function()
  {
     $(".qty").on("change",calculateTotal)
     $(".qty_female").on("change",calculateTotal)
-    $(".race").on("change",calculateTotal)
+   
     $(".dt").on("change",calculateTotal)
     $(".fra").on("change",calculateTotal)
     $(".hgi").on("change",calculateTotal)
@@ -137,7 +115,7 @@ $(function()
     $(".nyha").on("change",calculateTotal)
     $(".rvef").on("change",calculateTotal)
     $(".ha1c").on("change",calculateTotal)
-    $(".ice").on("change",calculateTotal)
+   
   
 })
 
